@@ -1,0 +1,18 @@
+import random
+
+count = 0
+
+while True:
+    dice = int(input("How many dice do you want to roll? "))
+    results = []
+    if dice==0:
+        print("you try to roll the dice for 0 times")
+    else:
+        print(f"you rolled:{[random.randint(1,6) for i in range(dice)]}")
+    count+=dice
+    print(f"Total rolls so far: {count}")
+
+    again = input("Roll again? (y/n): ").lower()
+    if again != 'y':
+        print("Thanks For Playing \nHave A Nice Day")
+        break
